@@ -32,14 +32,12 @@ You will be able to:
 
 ## 📚 Lessons
 
-[What is Git?](lessons/what_is_git.en.md){ .md-button }
 
-[Installing Git and using GitHub](lessons/installing_git.en.md){ .md-button }
-
-[Basic git commands](lessons/commands.en.md){ .md-button }
-
-[Basic git commands in VS Code](lessons/commands_vs_code.en.md){ .md-button }
-
-[Workshop](lessons/workshop.en.md){ .md-button }
-
-[Collaboration Best Practices](lessons/best_practices.en.md){ .md-button }
+| 📘 Topic                        | 🔗 Link                                            |
+|--------------------------------|----------------------------------------------------|
+| What is Git?                   | [Open](lessons/what_is_git.en.md){ .md-button }    |
+| Install Git and use GitHub     | [Open](lessons/installing_git.en.md){ .md-button } |
+| Basic git commands             | [Open](lessons/commands.en.md){ .md-button }       |
+| Basic git commands in VSCode   | [Open](lessons/commands_vs_code.en.md){ .md-button }|
+| Workshop                       | [Open](lessons/workshop.en.md){ .md-button }       |
+| Collaboration Best Practices   | [Open](lessons/best_practices.en.md){ .md-button } |

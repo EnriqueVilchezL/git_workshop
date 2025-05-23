@@ -38,14 +38,11 @@ Vas a ser capaz de:
 
 ## 📚 Lecciones
 
-[¿Qué es Git?](lessons/what_is_git.es.md){ .md-button }
-
-[Instalación de Git y uso de GitHub](lessons/installing_git.es.md){ .md-button }
-
-[Comandos básicos de Git](lessons/commands.es.md){ .md-button }
-
-[Comandos básicos de Git en VS Code](lessons/commands_vs_code.es.md){ .md-button }
-
-[Taller](lessons/workshop.es.md){ .md-button }
-
-[Mejores prácticas de colaboración](lessons/best_practices.es.md){ .md-button }
+| 📘 Tema                       | 🔗 Enlace                                           |
+|------------------------------|----------------------------------------------------|
+| ¿Qué es Git?                 | [Abrir](lessons/what_is_git.es.md){ .md-button }   |
+| Instalación de Git y uso de GitHub | [Abrir](lessons/installing_git.es.md){ .md-button } |
+| Comandos básicos de Git      | [Abrir](lessons/commands.es.md){ .md-button }      |
+| Comandos básicos de Git en VS Code | [Abrir](lessons/commands_vs_code.es.md){ .md-button } |
+| Taller                      | [Abrir](lessons/workshop.es.md){ .md-button }      |
+| Mejores prácticas de colaboración | [Abrir](lessons/best_practices.es.md){ .md-button } |
