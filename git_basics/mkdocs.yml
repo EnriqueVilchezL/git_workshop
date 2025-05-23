@@ -1,4 +1,5 @@
 site_name: Git Basics
+site_url: https://EnriqueVilchezL.github.io/git_workshop/
 
 theme:
   name: material
