@@ -1,0 +1,824 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../commands_vs_code/">
+      
+      
+        <link rel="next" href="../best_practices/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Workshop - Git Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-github-paired-exercise-python-functions-and-version-control" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Git Basics" class="md-header__button md-logo" aria-label="Git Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Git Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Workshop
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/lessons/workshop/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Git Basics" class="md-nav__button md-logo" aria-label="Git Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Git Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lessons
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lessons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what_is_git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is Git?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing_git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installing Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands_vs_code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git in VS Code
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Workshop
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Workshop
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-0-create-a-github-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Step 0: Create a GitHub Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-invite-your-partner-to-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      👫 Step 1: Invite Your Partner to the Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-clone-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Step 2: Clone the Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-partner-a-create-a-python-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐍 Step 3: Partner A - Create a Python File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-partner-b-add-a-new-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Step 4: Partner B - Add a New Function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-expect-a-merge-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Step 5: Expect a Merge Conflict
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-resolve-the-merge-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Step 6: Resolve the Merge Conflict
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-0-create-a-github-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Step 0: Create a GitHub Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-invite-your-partner-to-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      👫 Step 1: Invite Your Partner to the Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-clone-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Step 2: Clone the Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-partner-a-create-a-python-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐍 Step 3: Partner A - Create a Python File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-partner-b-add-a-new-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Step 4: Partner B - Add a New Function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-expect-a-merge-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Step 5: Expect a Merge Conflict
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-resolve-the-merge-conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Step 6: Resolve the Merge Conflict
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="git-github-paired-exercise-python-functions-and-version-control">🧪 Git &amp; GitHub Paired Exercise: Python Functions and Version Control</h1>
+<p>This tutorial will guide you and a partner through collaborating on a Python project using Git and GitHub. You’ll practice creating a repo, cloning it, writing code, committing changes, pushing to GitHub, and resolving a merge conflict.</p>
+<hr />
+<h2 id="step-0-create-a-github-repository">📁 Step 0: Create a GitHub Repository</h2>
+<p>Partner A should:</p>
+<ol>
+<li>Go to https://github.com and log into your account.</li>
+<li>Click the <strong>+</strong> icon in the top right, then choose <strong>New repository</strong>.</li>
+<li>Name the repository: <code>python-functions-practice</code></li>
+<li>Optionally, add a description.</li>
+<li><strong>Leave all checkboxes unchecked</strong> (no README, no .gitignore, no license).</li>
+<li>Click <strong>Create repository</strong>.</li>
+<li>Copy the HTTPS URL shown (you’ll use it to clone).</li>
+</ol>
+<hr />
+<h2 id="step-1-invite-your-partner-to-the-repository">👫 Step 1: Invite Your Partner to the Repository</h2>
+<p>Still Partner A:</p>
+<ol>
+<li>Go to the repository page on GitHub.</li>
+<li>Click the <strong>Settings</strong> tab.</li>
+<li>Under <strong>Access</strong>, click <strong>Collaborators</strong>.</li>
+<li>Click <strong>Invite a collaborator</strong>.</li>
+<li>Type your partner’s GitHub username and send the invite.</li>
+</ol>
+<p>Partner B must accept the invitation before continuing.</p>
+<hr />
+<h2 id="step-2-clone-the-repository">💻 Step 2: Clone the Repository</h2>
+<p>Now <strong>both partners</strong> should run this at the same time:</p>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/<span class="o">[</span>your-username<span class="o">]</span>/python-functions-practice.git
+<span class="nb">cd</span><span class="w"> </span>python-functions-practice
+</code></pre></div>
+<hr />
+<h2 id="step-3-partner-a-create-a-python-file">🐍 Step 3: Partner A - Create a Python File</h2>
+<p>Partner A: create a file named <code>math_utils.py</code>, and define a function that calculates the summation from 1 to <code>n</code>. Before showing the right answer, try to do it!</p>
+<details class="example">
+<summary>Answer</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">summation</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">summation</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">summation</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">summation</span>
+</code></pre></div>
+</details>
+<p>Now that you’ve created your file, let’s see what Git thinks is happening. Try to run a status with git. Do you remember how to do it?</p>
+<details class="example">
+<summary>Answer</summary>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
+</code></pre></div>
+<p>What do you see? Probably, your output looks like this:</p>
+<p><span style="color:red">math_utils.py</span></p>
+<p>This means that the file is <code>untracked</code>. That is, we have made some changed in the file, but it won’t be included in the next commit unless you git add it.</p>
+</details>
+<p>Let's try to add it! Do a git add, but don't see the answer until you try it:</p>
+<details class="example">
+<summary>Answer</summary>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>math_utils.py
+</code></pre></div>
+</details>
+<p>Now, we have placed added the <code>math_utils.py</code>. But still, we need to make a commit. Try to do a commit with the message "Added summation function".</p>
+<details class="example">
+<summary>Answer</summary>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add summation function&quot;</span>
+</code></pre></div>
+</details>
+<p>Great! Try to check the <code>GitHub</code> repository you just created.</p>
+<p>Hmmm... There is nothing there... Are we missing something?</p>
+<details class="example">
+<summary>Answer</summary>
+<p>Correct! We need to do a <code>push</code> to send those changes into the remote repository.</p>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push
+</code></pre></div>
+<p>Try to see your GitHub repository to check that the file is there.</p>
+</details>
+<hr />
+<h2 id="step-4-partner-b-add-a-new-function">👥 Step 4: Partner B - Add a New Function</h2>
+<p>Partner B: create a file named <code>math_utils.py</code>, and define a function that calculates the summation from 1 to <code>n</code>. It has to be a different implementation. Before showing the right answer, try to do it!</p>
+<details class="example">
+<summary>Answer</summary>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">summation</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</code></pre></div>
+</details>
+<p>Good! Now, try to do the same as your partner. Try to push the changes into the remote repository.</p>
+<details class="example">
+<summary>Answer</summary>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>math_utils.py
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Added a mean function&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div>
+</details>
+<p>Whoops... Something went wrong... What is it?</p>
+<details class="example">
+<summary>Answer</summary>
+<p>Partner B did a change in a file that was already created, but the remote file has some changes that Partner B does not have on its local machine.</p>
+<p>This is known as a <code>conflict</code>. It happens when you do changes locally but you did not pull the changes that other people did in the remote repository.</p>
+</details>
+<hr />
+<h2 id="step-5-expect-a-merge-conflict">🚨 Step 5: Expect a Merge Conflict</h2>
+<p>Partner B: are likely seeing something like</p>
+<p><span style="color:red">! [rejected] main -&gt; main (fetch first)</span></p>
+<p>This means someone else (Partner A) already pushed changes.</p>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>--no-rebase
+</code></pre></div>
+<p>You’ll see a merge conflict in <code>math_utils.py</code>.</p>
+<hr />
+<h2 id="step-6-resolve-the-merge-conflict">🛠️ Step 6: Resolve the Merge Conflict</h2>
+<p>Open <code>math_utils.py</code>. You’ll see something like:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> <span class="n">HEAD</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">summation</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="o">=======</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">summation</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">summation</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">summation</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">summation</span>
+<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="n">main</span>
+</code></pre></div>
+<p>On top, you will see some options, such as <code>Accept Current Change</code> | <code>Accept Incoming Change</code> | <code>Accept Both Changes</code> | <code>Compare Changes</code>.</p>
+<p>These are some alternatives that you can choose to solve the conflict. They mean:</p>
+<ul>
+<li>
+<p>Accept Current Change
+→ Keeps your local changes and discards the remote ones.</p>
+</li>
+<li>
+<p>Accept Incoming Change
+→ Keeps the changes from the remote repository and discards your local edits.</p>
+</li>
+<li>
+<p>Accept Both Changes
+→ Includes both your changes and the remote changes, stacked one after the other.
+⚠️ You’ll often need to edit manually afterward to make the result make sense.</p>
+</li>
+<li>
+<p>Compare Changes
+→ Shows a side-by-side diff view to help you decide which changes to keep.</p>
+</li>
+</ul>
+<p>Let's try to accept both changes. If the file made something weird, try to change it so it looks like this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">summation</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">summation_2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">summation</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">summation</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">summation</span>
+</code></pre></div>
+<p>Then run:</p>
+<p>→ Run in terminal:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>math_utils.py
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Resolve merge conflict and keep both functions&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div></p>
+<hr />
+<h1 id="bonus-lesson-vscode-git-github-paired-exercise">🧪 Bonus lesson: VSCode Git &amp; GitHub Paired Exercise</h1>
+<p>Try to recreate the tutorial inverting your roles. But now, we will try to use the Built-In feature of Visual Studio Code to manage the git repository. Instead of using bash git commands, we can use VS Code to do everything we need.</p>
+<p>If you need some help, check the <a href="../commands_vs_code/">VS Code Git</a> section.</p>
+<hr />
+<h2 id="pro-tips">💬 Pro Tips</h2>
+<ul>
+<li>Run <code>git status</code> often — it's your guide to what's happening.</li>
+<li>Communicate with your partner to avoid overlap and confusion.</li>
+<li>Always pull before pushing when working in teams.</li>
+</ul>
+<p>Happy coding!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

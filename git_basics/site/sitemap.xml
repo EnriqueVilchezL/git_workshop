@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/"/>
+    </url>
+    <url>
+        <loc>Nonelessons/best_practices/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/best_practices/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/best_practices/"/>
+    </url>
+    <url>
+        <loc>Nonelessons/commands/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/commands/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/commands/"/>
+    </url>
+    <url>
+        <loc>Nonelessons/commands_vs_code/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/commands_vs_code/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/commands_vs_code/"/>
+    </url>
+    <url>
+        <loc>Nonelessons/installing_git/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/installing_git/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/installing_git/"/>
+    </url>
+    <url>
+        <loc>Nonelessons/what_is_git/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/what_is_git/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/what_is_git/"/>
+    </url>
+    <url>
+        <loc>Nonelessons/workshop/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/workshop/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/workshop/"/>
+    </url>
+    <url>
+        <loc>Nonees/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+    </url>
+    <url>
+        <loc>Nonees/lessons/best_practices/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/best_practices/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/best_practices/"/>
+    </url>
+    <url>
+        <loc>Nonees/lessons/commands/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/commands/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/commands/"/>
+    </url>
+    <url>
+        <loc>Nonees/lessons/commands_vs_code/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/commands_vs_code/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/commands_vs_code/"/>
+    </url>
+    <url>
+        <loc>Nonees/lessons/installing_git/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/installing_git/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/installing_git/"/>
+    </url>
+    <url>
+        <loc>Nonees/lessons/what_is_git/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/what_is_git/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/what_is_git/"/>
+    </url>
+    <url>
+        <loc>Nonees/lessons/workshop/</loc>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="Nonees/lessons/workshop/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonelessons/workshop/"/>
+    </url>
+</urlset>

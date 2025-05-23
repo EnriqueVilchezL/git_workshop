@@ -1,0 +1,45 @@
+site_name: Git Basics
+
+theme:
+  name: material
+  features:
+  - content.tabs.link
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - i18n:
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+          nav:
+            - Home: index.en.md
+            - Lessons:
+              - What is Git?: lessons/what_is_git.en.md
+              - Installing Git: lessons/installing_git.en.md
+              - Basic Commands: lessons/commands.en.md
+              - Git in VS Code: lessons/commands_vs_code.en.md
+              - Workshop: lessons/workshop.en.md
+              - Best Practices: lessons/best_practices.en.md
+          
+        - locale: es
+          name: Español
+          build: true
+          nav:
+            - Inicio: index.es.md
+            - Lecciones:
+              - ¿Qué es Git?: lessons/what_is_git.es.md
+              - Instalando Git: lessons/installing_git.es.md
+              - Comandos Básicos: lessons/commands.es.md
+              - Git en VS Code: lessons/commands_vs_code.es.md
+              - Taller: lessons/workshop.es.md
+              - Buenas Prácticas: lessons/best_practices.es.md
+              
