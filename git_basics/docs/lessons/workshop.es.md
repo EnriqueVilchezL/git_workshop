@@ -220,7 +220,7 @@ git commit -m "Resolve merge conflict and keep both functions"
 git push
 ```
 
-## ⏰ Paso 7: Partner A - Revisa la Función Original y Agrégala de Nuevo
+## ⏰ Paso 7: Socio A - Revisa la Función Original y Agrégala de Nuevo
 
 ¡Muy bien! Ahora vamos a hacer un pequeño viaje en el tiempo para ver la primera versión de nuestra función `summation` — la que escribiste antes de que tu compañero comenzara a hacer cambios. Esta es una excelente forma de comprobar si tu función original está correcta y no fue modificada accidentalmente.
 
