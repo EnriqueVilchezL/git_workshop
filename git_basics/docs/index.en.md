@@ -32,7 +32,6 @@ You will be able to:
 
 ## 📚 Lessons
 
-
 | 📘 Topic                        | 🔗 Link                                            |
 |--------------------------------|----------------------------------------------------|
 | What is Git?                   | [Open](lessons/what_is_git.en.md){ .md-button }    |
@@ -40,4 +39,11 @@ You will be able to:
 | Basic git commands             | [Open](lessons/commands.en.md){ .md-button }       |
 | Basic git commands in VSCode   | [Open](lessons/commands_vs_code.en.md){ .md-button }|
 | Workshop                       | [Open](lessons/workshop.en.md){ .md-button }       |
+| Collaboration Best Practices   | [Open](lessons/best_practices.en.md){ .md-button } |
+
+## 📖 Useful material
+
+| 📘 Topic                        | 🔗 Link                                            |
+|--------------------------------|----------------------------------------------------|
+| Basic git commands in VSCode   | [Open](lessons/commands_vs_code.en.md){ .md-button }|
 | Collaboration Best Practices   | [Open](lessons/best_practices.en.md){ .md-button } |

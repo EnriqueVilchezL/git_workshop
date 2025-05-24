@@ -221,13 +221,98 @@ git commit -m "Resolve merge conflict and keep both functions"
 git push
 ```
 
+## ⏰ Step 7: Partner A - Check the Original Function and Add It Back
+
+Alright! Now let’s take a little trip back in time to see the very first version of our `summation` function — the one you wrote before your partner started making changes. This is a great way to check if your original function is correct and wasn’t accidentally changed.
+
+### What exactly are we doing here?
+
+- When we use `git checkout <commit>`, we **temporarily switch our project files to look exactly like they did at that specific commit** — like rewinding a movie to an earlier scene.  
+- This doesn’t delete anything; it just lets us **view or copy code from the past** without changing the current state.  
+- Once we’re done looking, we’ll **go back to the latest version on the main branch** using `git checkout main`.  
+- Then, we’ll add the original function back into the current code, but with a new name so it doesn’t interfere with your partner’s changes.  
+
+### Here’s what we’ll do, step by step:
+
+1. First, update your local copy with the latest changes so everything is synced. We don't want any more conflicts!  Do you remember how to do it?
+
+    ??? example "Answer"
+
+        → Run in terminal:
+
+        ```bash
+        git pull
+        ```
+
+2. **Find the very first commit you made** (that’s like the first snapshot of your project):
+
+    → Run in terminal:
+
+    ```bash
+    git log --oneline
+    ```
+
+    This will show a list of commits. Scroll down and find the oldest one at the bottom. Copy its short code (it looks like a mix of letters and numbers, for example: `a1b2c3d`).
+
+3. **Check out that first commit to see what your code looked like back then:**
+
+    → Run in terminal:
+
+    ```bash
+    git checkout a1b2c3d
+    ```
+
+    This will make us travel in time to your commit!
+
+    *(Replace `a1b2c3d` with the actual code you copied!)*
+
+4. **Open `math_utils.py` and find your original `summation` function.**
+
+    Copy all the code inside this function — this is your original, unmodified version.
+
+5. **Now, come back to the present!**
+
+    → Run in terminal:
+
+    ```bash
+    git checkout main
+    ```
+
+6. **Open `math_utils.py` again.**  
+    Paste the original function you copied, but rename it to `summation_original` to keep it separate from the current one, like this:
+
+    ```python
+    def summation_original(n):
+        summation = 0
+        for i in range(n + 1):
+            summation += i
+        return summation
+    ```
+
+7. **Save the file, then add, commit, and push your changes:**
+    Try to do it, you are an expert at this!
+
+    ??? example "Answer"
+
+        → Run in terminal:
+
+        ```bash
+        git add math_utils.py
+        git commit -m "Add original summation function as summation_original"
+        git push
+        ```
+
+---
+
+🎉 Now you have **both versions** of the function in your project! This way, you can compare them, test which one works better, or just keep the original safe. Great job going back in time and learning how to manage your project’s history like a pro!
+
 ---
 
 # 🧪 Bonus lesson: VSCode Git & GitHub Paired Exercise
 
 Try to recreate the tutorial inverting your roles. But now, we will try to use the Built-In feature of Visual Studio Code to manage the git repository. Instead of using bash git commands, we can use VS Code to do everything we need.
 
-If you need some help, check the [VS Code Git](commands_vs_code.en.md) section.
+If you need some help, check the [VS Code Git](commands_vs_code.en.md) section. If you can't execute some commands in VS Code, use the terminal.
 
 ---
 
@@ -236,5 +321,7 @@ If you need some help, check the [VS Code Git](commands_vs_code.en.md) section.
 - Run `git status` often — it's your guide to what's happening.
 - Communicate with your partner to avoid overlap and confusion.
 - Always pull before pushing when working in teams.
+
+Check the [Best Practices](best_practices.en.md) section to become a Pro!
 
 Happy coding!

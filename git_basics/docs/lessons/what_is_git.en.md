@@ -20,7 +20,7 @@ Here’s why Git is awesome:
 - 💾 **Save Your Work** – Git keeps versions of your files so you don’t lose anything.
 - 🧑‍🤝‍🧑 **Work With Others** – You and your friends can work on the same thing without stepping on each other’s toes.
 - 🧪 **Try New Things Safely** – Test out new ideas without breaking your main work.
-- 🛠️ **Undo Mistakes** – Oops! Made a mistake? Git can take you back to how things were before.
+- 🛠️ **Undo Mistakes** – Oops! Made a mistake? Git can take you back to how things were before. Git takes a little **snapshot** 📸 of your project every time you tell it to
 - 📜 **See a History of Changes** – Know who changed what and when.
 
 ---
@@ -28,16 +28,6 @@ Here’s why Git is awesome:
 ## 👨‍🔧 A Quick Bit of History
 
 Git was created in 2005 by a really smart guy named **Linus Torvalds** (the same person who made Linux 🐧). He needed a better way to manage lots of changes in a huge project — and boom, Git was born!
-
----
-
-## 🧩 How Does Git Help You?
-
-Git takes a little **snapshot** 📸 of your project every time you tell it to. You can:
-
-- Go back in time to an earlier version 🕒
-- Share your work with others 🌍
-- Keep everything organized and under control 🗂️
 
 ---
 

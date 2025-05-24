@@ -37,14 +37,112 @@ Pick your operating system below to see the right instructions 👇
 
 ---
 
-## ✍️ Set Up Git with Your Name
+## ✍️ Initial Git Configuration
 
-Once Git is installed, open Git Bash or Terminal and tell Git who you are:
+### Tell Git who you are
+
+After installing Git, open **Git Bash** (on Windows) or **Terminal** (on Mac or Linux). Then type the following 👇
 
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
+
+This tells Git how to sign your projects — like leaving your digital signature.
+
+---
+
+## 🔐 What happens the first time you use `git clone`?
+
+When you try to copy (or “clone”) a project from GitHub for the first time, Git needs to confirm your identity. This is called **authentication**, and it works differently depending on your computer:
+
+---
+
+=== "🪟 Windows"
+
+    1. Open a **Terminal** and type the following to clone your repository:
+
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    ```
+
+    2. A **browser window** will automatically open.
+    3. Sign in to GitHub with your username and password — just like you normally would on the website.
+    4. Done! 🎉 Git will remember you and won’t ask for your password every time.
+
+    > ✅ This works thanks to a tool called **Git Credential Manager (GCM)**, which is included with Git for Windows. It stores your credentials securely on your computer.
+
+=== "🍏 Mac"
+
+    1. Open your browser and go to:  
+    [https://github.com/settings/tokens](https://github.com/settings/tokens)
+
+    2. Click on **"Generate new token"**.
+    3. When creating the token:
+
+        - Add a note so you remember what it's for (e.g., "Repository access").
+        - Choose a duration (e.g., 90 days). When it expires, you’ll need to create a new one and repeat these steps. If you don’t want it to expire, you can set it to "no expiration". ⚠️ Not recommended for security reasons, but it’s your choice.
+        - Check the `repo` box to give it access to your repositories.
+
+        ![Option repo in GitHub](imgs/option_repo.png)
+
+    4. Click **"Generate token"** at the bottom.  
+    🔐 Copy the token that appears (save it somewhere safe — you won’t be able to see it again later!).
+
+    5. Then open **Terminal** and type:
+        ```bash
+        git config --global credential.helper store
+        ```
+    This tells Git to save your credentials so you don’t have to type your token every time you interact with GitHub. Now try cloning your repository:
+        ```bash
+        git clone https://github.com/your-username/your-repository.git
+        ```
+
+    6. Git will ask for:
+
+        - Your **GitHub username**
+        - Your **token** (that long code you copied earlier). When you paste the token, you will see nothing in the terminal, and that is completely normal. It was pasted, but the terminal did not show it because it is treated like a password.
+
+    7. Done! You can now use `git push`, `git clone`, etc. without issues.
+
+    > ⚠️ This stores your token in a plain text file on your computer. It's fine if it's your personal machine — but don't do this on public or shared computers.
+
+=== "🐧 Linux"
+
+    1. Open your browser and go to:  
+    [https://github.com/settings/tokens](https://github.com/settings/tokens)
+
+    2. Click on **"Generate new token"**.
+    3. When creating the token:
+
+        - Add a note so you remember what it's for (e.g., "Repository access").
+        - Choose a duration (e.g., 90 days). When it expires, you’ll need to create a new one and repeat these steps. If you don’t want it to expire, you can set it to "no expiration". ⚠️ Not recommended for security reasons, but it’s your choice.
+        - Check the `repo` box to give it access to your repositories.
+
+        ![Option repo in GitHub](imgs/option_repo.png)
+
+    4. Click **"Generate token"** at the bottom.  
+    🔐 Copy the token that appears (save it somewhere safe — you won’t be able to see it again later!).
+
+    5. Then open **Terminal** and type:
+        ```bash
+        git config --global credential.helper store
+        ```
+    This tells Git to save your credentials so you don’t have to type your token every time you interact with GitHub. Now try cloning your repository:
+        ```bash
+        git clone https://github.com/your-username/your-repository.git
+        ```
+
+    6. Git will ask for:
+
+        - Your **GitHub username**
+        - Your **token** (that long code you copied earlier). When you paste the token, you will see nothing in the terminal, and that is completely normal. It was pasted, but the terminal did not show it because it is treated like a password.
+
+    7. Done! You can now use `git push`, `git clone`, etc. without issues.
+
+    > ⚠️ This stores your token in a plain text file on your computer. It's fine if it's your personal machine — but don't do this on public or shared computers.
+
+---
 
 ## 🌐 What is GitHub?
 
@@ -53,6 +151,8 @@ GitHub is a free website where you can:
 - 🗃️ Store your projects online
 - 👯 Collaborate with others
 - 📣 Show your work to the world!
+
+Git is the tool we use for local version control, and GitHub helps us share that version control with more people across different machines.
 
 ## 🚀 How to Use GitHub
 

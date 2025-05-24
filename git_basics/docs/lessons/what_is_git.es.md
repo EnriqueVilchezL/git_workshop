@@ -20,7 +20,7 @@ He aquí por qué Git es increíble:
 - 💾 **Guarda tu trabajo** – Git mantiene versiones de tus archivos para que no pierdas nada.
 - 🧑‍🤝‍🧑 **Trabaja con otros** – Tú y tus amigos pueden trabajar en lo mismo sin estorbarse.
 - 🧪 **Prueba cosas nuevas de forma segura** – Prueba nuevas ideas sin estropear tu trabajo principal.
-- 🛠️ **Deshacer errores** – ¡Ups! ¿Cometiste un error? Git puede regresarte a cómo estaban las cosas antes.
+- 🛠️ **Deshacer errores** – ¡Ups! ¿Cometiste un error? Git puede regresarte a cómo estaban las cosas antes. Git toma una pequeña **instantánea** 📸 de tu proyecto cada vez que se lo indicas.
 - 📜 **Ver un historial de cambios** – Saber quién cambió qué y cuándo.
 
 ---
@@ -28,16 +28,6 @@ He aquí por qué Git es increíble:
 ## 👨‍🔧 Un poco de historia
 
 Git fue creado en 2005 por un tipo realmente inteligente llamado **Linus Torvalds** (la misma persona que hizo Linux 🐧). Necesitaba una mejor manera de gestionar muchos cambios en un proyecto enorme, ¡y pum, nació Git!
-
----
-
-## 🧩 ¿Cómo te ayuda Git?
-
-Git toma una pequeña **instantánea** 📸 de tu proyecto cada vez que se lo indicas. Puedes:
-
-- Retroceder en el tiempo a una versión anterior 🕒
-- Compartir tu trabajo con otros 🌍
-- Mantener todo organizado y bajo control 🗂️
 
 ---
 

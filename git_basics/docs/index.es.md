@@ -43,6 +43,11 @@ Vas a ser capaz de:
 | ¿Qué es Git?                 | [Abrir](lessons/what_is_git.es.md){ .md-button }   |
 | Instalación de Git y uso de GitHub | [Abrir](lessons/installing_git.es.md){ .md-button } |
 | Comandos básicos de Git      | [Abrir](lessons/commands.es.md){ .md-button }      |
-| Comandos básicos de Git en VS Code | [Abrir](lessons/commands_vs_code.es.md){ .md-button } |
 | Taller                      | [Abrir](lessons/workshop.es.md){ .md-button }      |
+
+## 📖 Material útil
+
+| 📘 Tema                       | 🔗 Enlace                                           |
+|------------------------------|----------------------------------------------------|
+| Comandos básicos de Git en VS Code | [Abrir](lessons/commands_vs_code.es.md){ .md-button } |
 | Mejores prácticas de colaboración | [Abrir](lessons/best_practices.es.md){ .md-button } |

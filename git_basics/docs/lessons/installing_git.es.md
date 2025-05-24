@@ -37,14 +37,112 @@ Elige tu sistema operativo a continuación para ver las instrucciones correctas 
 
 ---
 
-## ✍️ Configura Git con tu nombre
+## ✍️ Configuración inicial de Git
 
-Una vez que Git esté instalado, abre Git Bash o Terminal y dile a Git quién eres:
+### Dile a Git quién eres
 
-```bash
-git config --global user.name "Tu Nombre"
-git config --global user.email "tu.email@example.com"
-```
+Después de instalar Git, abre **Git Bash** (en Windows) o la **Terminal** (en Mac o Linux). Luego escribe lo siguiente 👇
+
+🖥️ *Escribe en la terminal:*
+
+    git config --global user.name "Tu Nombre"
+    git config --global user.email "tu.email@example.com"
+
+Esto le dice a Git cómo firmar tus proyectos (como si dejaras tu firma digital).
+
+---
+
+## 🔐 ¿Qué pasa la primera vez que usas `git clone`?
+
+Cuando intentas copiar (o "clonar") un proyecto desde GitHub por primera vez, Git necesita saber que realmente eres tú. Esto se llama **autenticación**, y funciona de forma diferente según tu computadora:
+
+---
+
+=== "🪟 Windows"
+
+    1. Abre **Git Bash** y escribe lo siguiente para clonar tu repositorio:
+
+    ```bash
+    git clone https://github.com/tu-usuario/tu-repositorio.git
+    ```
+
+    2. Se abrirá una **ventana del navegador** automáticamente.
+    3. Inicia sesión en GitHub con tu usuario y contraseña, como si entraras normalmente a la página.
+    4. ¡Listo! 🎉 Git recordará que eres tú y no volverá a pedir tu contraseña cada vez que uses Git.
+
+    > ✅ Esto es posible gracias a una herramienta llamada **Git Credential Manager (GCM)**, que ya viene incluida en Git para Windows. Guarda tus credenciales de forma segura en tu computadora.
+
+=== "🍏 Mac"
+
+    1. Abre tu navegador y ve a esta página:  
+    [https://github.com/settings/tokens](https://github.com/settings/tokens)
+
+    2. Haz clic en **"Generate new token"**.
+    3. Toma en cuenta esto para crearlo:
+        - Ponle una nota para recordar de qué es el token (por ejemplo, "Para acceso a repositorios").
+        - Elige una duración (por ejemplo, 90 días). Al finalizar los 90 días, deberás crear un nuevo token y repetir estos pasos. Si no quieres que expire, puedes indicar que no tenga fecha de expiración. ⚠️ Esto no se recomienda por motivos de seguridad, pero tú decides si te queda más cómodo.
+        - Marca la opción `repo` para darle permisos y que funcione con tus proyectos.
+
+        ![Opcion repo en GitHub](imgs/option_repo.png)
+
+    4. Haz clic en **"Generate token"** al final.  
+    🔐 Copia ese código que aparece (¡guárdalo o pégalo en un lugar seguro porque luego no se puede recuperar!).
+
+    5. Luego abre la **Terminal** y escribe:
+        ```bash
+        git config --global credential.helper store
+        ```
+        Esto le dice a Git que guarde tus credenciales para que no tengas que estar escribiendo tu token cada vez que interactúas con el repositorio de GitHub. Luego, intenta clonar tu repositorio:
+        ```bash
+        git clone https://github.com/tu-usuario/tu-repositorio.git
+        ```
+
+    6. Git te va a pedir:
+
+        - Tu **nombre de usuario de GitHub**
+        - Tu **token** (ese código largo que copiaste antes). Cuando pegues el token, no verás nada en la terminal, y eso es completamente normal. El token se pegó, pero la terminal no lo muestra porque se trata como una contraseña.
+
+    7. Listo! Ahora puedes hacer `git push`, `git clone`, etc. sin problema.
+
+    > ⚠️ Esto guardará tu token en un archivo de texto dentro de tu computadora. Funciona bien si es tu PC personal, pero no lo hagas en computadoras públicas o compartidas.
+
+=== "🐧 Linux"
+
+    1. Abre tu navegador y ve a esta página:  
+    [https://github.com/settings/tokens](https://github.com/settings/tokens)
+
+    2. Haz clic en **"Generate new token"**.
+    3. Toma en cuenta esto para crearlo:
+        - Ponle una nota para recordar de qué es el token (por ejemplo, "Para acceso a repositorios").
+        - Elige una duración (por ejemplo, 90 días). Al finalizar los 90 días, deberás crear un nuevo token y repetir estos pasos. Si no quieres que expire, puedes indicar que no tenga fecha de expiración. ⚠️ Esto no se recomienda por motivos de seguridad, pero tú decides si te queda más cómodo.
+        - Marca la opción `repo` para darle permisos y que funcione con tus proyectos.
+
+        ![Opcion repo en GitHub](imgs/option_repo.png)
+
+    4. Haz clic en **"Generate token"** al final.  
+    🔐 Copia ese código que aparece (¡guárdalo o pégalo en un lugar seguro porque luego no se puede recuperar!).
+
+    5. Luego abre la **Terminal** y escribe:
+        ```bash
+        git config --global credential.helper store
+        ```
+        Esto le dice a Git que guarde tus credenciales para que no tengas que estar escribiendo tu token cada vez que interactúas con el repositorio de GitHub. Luego, intenta clonar tu repositorio:
+        ```bash
+        git clone https://github.com/tu-usuario/tu-repositorio.git
+        ```
+
+    6. Git te va a pedir:
+
+        - Tu **nombre de usuario de GitHub**
+        - Tu **token** (ese código largo que copiaste antes). Cuando pegues el token, no verás nada en la terminal, y eso es completamente normal. El token se pegó, pero la terminal no lo muestra porque se trata como una contraseña.
+
+    7. Listo! Ahora puedes hacer `git push`, `git clone`, etc. sin problema.
+
+    > ⚠️ Esto guardará tu token en un archivo de texto dentro de tu computadora. Funciona bien si es tu PC personal, pero no lo hagas en computadoras públicas o compartidas.
+
+---
+
+Si usas Git por primera vez, no te preocupes si algo no sale perfecto. ¡Todo el mundo aprende poco a poco! 🧠✨
 
 ## 🌐 ¿Qué es GitHub?
 
@@ -53,6 +151,8 @@ GitHub es un sitio web gratuito donde puedes:
 - 🗃️ **Almacenar tus proyectos en línea**: Imagina que es como un gran disco duro en la nube para todo tu código.
 - 👯 **Colaborar con otros**: Trabaja en equipo en un mismo proyecto sin sobrescribir el trabajo de los demás.
 - 📣 **Mostrar tu trabajo al mundo**: Comparte tus creaciones con reclutadores, amigos o la comunidad.
+
+Git es la herramienta que usamos para llevar el control de versiones local, y GitHub nos ayuda a compartir ese control de versiones con más personas, en distintas máquinas.
 
 ---
 

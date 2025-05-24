@@ -36,7 +36,7 @@ El socio B debe aceptar la invitación antes de continuar.
 
 Ahora **ambos compañeros** deben ejecutar esto al mismo tiempo:
 
-→ Ejecutar en la terminal:
+→ Ejecuta en la terminal:
 
 ```bash
 git clone https://github.com/[tu-nombre-de-usuario]/python-functions-practice.git
@@ -63,7 +63,7 @@ Ahora que has creado tu archivo, veamos qué piensa Git que está sucediendo. In
 
 ??? example "Respuesta"
 
-    → Ejecutar en la terminal:
+    → Ejecuta en la terminal:
 
     ```bash
     git status
@@ -79,7 +79,7 @@ Ahora que has creado tu archivo, veamos qué piensa Git que está sucediendo. In
 
 ??? example "Respuesta"
 
-    → Ejecutar en la terminal:
+    → Ejecuta en la terminal:
 
     ```bash
     git add math_utils.py
@@ -89,7 +89,7 @@ Ahora que has creado tu archivo, veamos qué piensa Git que está sucediendo. In
 
 ??? example "Respuesta"
 
-    → Ejecutar en la terminal:
+    → Ejecuta en la terminal:
 
     ```bash
     git commit -m "Add summation function"
@@ -103,7 +103,7 @@ Hmmm... No hay nada allí... ¿Nos falta algo?
 
     ¡Correcto! Necesitamos hacer un `push` para enviar esos cambios al repositorio remoto.
 
-    → Ejecutar en la terminal:
+    → Ejecuta en la terminal:
 
     ```bash
     git push
@@ -128,7 +128,7 @@ Socio B: crea un archivo llamado `math_utils.py`, y define una función que calc
 
 ??? example "Respuesta"
 
-    → Ejecutar en la terminal:
+    → Ejecuta en la terminal:
 
     ```bash
     git add math_utils.py
@@ -154,7 +154,7 @@ Socio B: es probable que veas algo como
 
 Esto significa que alguien más (Socio A) ya envió cambios.
 
-→ Ejecutar en la terminal:
+→ Ejecuta en la terminal:
 
 ```bash
 git pull --no-rebase
@@ -213,20 +213,102 @@ def summation_2(n):
 
 Luego ejecuta:
 
-→ Ejecutar en la terminal:
+→ Ejecuta en la terminal:
 ```bash
 git add math_utils.py
 git commit -m "Resolve merge conflict and keep both functions"
 git push
 ```
 
+## ⏰ Paso 7: Partner A - Revisa la Función Original y Agrégala de Nuevo
+
+¡Muy bien! Ahora vamos a hacer un pequeño viaje en el tiempo para ver la primera versión de nuestra función `summation` — la que escribiste antes de que tu compañero comenzara a hacer cambios. Esta es una excelente forma de comprobar si tu función original está correcta y no fue modificada accidentalmente.
+
+### ¿Qué es exactamente lo que estamos haciendo aquí?
+
+- Cuando usamos `git checkout <commit>`, **cambiamos temporalmente los archivos del proyecto para que se vean exactamente como estaban en ese commit específico** — como rebobinar una película a una escena anterior.  
+- Esto no borra nada; solo nos permite **ver o copiar código del pasado** sin cambiar el estado actual.  
+- Una vez que terminemos de revisar, volveremos a la versión más reciente en la rama main usando `git checkout main`.  
+- Luego, añadiremos la función original al código actual, pero con un nombre nuevo para que no interfiera con los cambios de tu compañero.  
+
+### Esto es lo que haremos, paso a paso:
+
+1. Primero, actualiza tu copia local con los últimos cambios para que todo esté sincronizado. ¡No queremos más conflictos! ¿Recuerdas cómo hacerlo?
+
+    ??? example "Respuesta"
+
+        → Ejecuta en la terminal:
+
+        ```bash
+        git pull
+        ```
+
+2. **Encuentra el primer commit que hiciste** (eso es como la primera foto instantánea de tu proyecto):
+
+    → Ejecuta en la terminal:
+    ```bash
+    git log --oneline
+    ```
+
+    Esto mostrará una lista de commits. Desplázate hasta el final para encontrar el más antiguo. Copia su código corto (parece una mezcla de letras y números, por ejemplo: `a1b2c3d`).
+
+3. **Haz checkout a ese primer commit para ver cómo era tu código en ese momento:**
+
+    → Ejecuta en la terminal:
+    ```bash
+    git checkout a1b2c3d
+    ```
+
+    ¡Esto nos hará viajar en el tiempo hasta ese commit!
+
+    *(Reemplaza `a1b2c3d` con el código real que copiaste.)*
+
+4. **Abre `math_utils.py` y busca tu función original `summation`.**
+
+    Copia todo el código dentro de esta función — esta es tu versión original, sin modificar.
+
+5. **¡Ahora, regresa al presente!**
+
+    → Ejecuta en la terminal:
+    ```bash
+    git checkout main
+    ```
+
+6. **Abre `math_utils.py` otra vez.**  
+    Pega la función original que copiaste, pero renómbrala como `summation_original` para mantenerla separada de la actual, así:
+
+    ```python
+    def summation_original(n):
+        summation = 0
+        for i in range(n + 1):
+            summation += i
+        return summation
+    ```
+
+7. **Guarda el archivo, luego haz add, commit y push de tus cambios:**  
+    ¡Inténtalo, ya eres un experto en esto!
+
+    ??? example "Respuesta"
+
+        → Ejecuta en la terminal:
+
+        ```bash
+        git add math_utils.py
+        git commit -m "Add original summation function as summation_original"
+        git push
+        ```
+
 ---
 
-# 🧪 Lección extra: Ejercicio en parejas de Git y GitHub en VSCode
+🎉 ¡Ahora tienes **ambas versiones** de la función en tu proyecto! Así puedes compararlas, probar cuál funciona mejor o simplemente conservar la original segura. ¡Gran trabajo viajando en el tiempo y aprendiendo a manejar el historial de tu proyecto como un pro!
 
-Intenta recrear el tutorial invirtiendo tus roles. Pero ahora, intentaremos usar la función incorporada de Visual Studio Code para gestionar el repositorio Git. En lugar de usar comandos de Git en Bash, podemos usar VS Code para hacer todo lo que necesitamos.
+---
 
-Si necesitas ayuda, consulta la sección de [Git en VS Code](commands_vs_code.es.md).
+# 🧪 Lección extra: Ejercicio Pareado de Git & GitHub en VSCode
+
+Intenta recrear este tutorial invirtiendo roles. Pero ahora, usaremos la función integrada de Visual Studio Code para manejar el repositorio git. En vez de usar comandos bash, podemos usar VS Code para hacer todo lo que necesitemos.
+
+Si necesitas ayuda, revisa la sección [VS Code Git](commands_vs_code.es.md). Si no puedes ejecutar algunos comandos en VS Code, usa la terminal.
 
 ---
 
@@ -235,5 +317,7 @@ Si necesitas ayuda, consulta la sección de [Git en VS Code](commands_vs_code.es
 - Ejecuta `git status` a menudo; es tu guía para saber lo que está pasando.
 - Comunícate con tu compañero para evitar superposiciones y confusiones.
 - Siempre haz `pull` antes de hacer `push` cuando trabajes en equipo.
+
+¡Consulta la sección [Mejores Prácticas](best_practices.es.md) para convertirte en un Pro!
 
 ¡Feliz codificación!
