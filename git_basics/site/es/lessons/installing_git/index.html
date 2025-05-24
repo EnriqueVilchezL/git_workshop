@@ -326,9 +326,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configura-git-con-tu-nombre" class="md-nav__link">
+  <a href="#configuracion-inicial-de-git" class="md-nav__link">
     <span class="md-ellipsis">
-      ✍️ Configura Git con tu nombre
+      ✍️ Configuración inicial de Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✍️ Configuración inicial de Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dile-a-git-quien-eres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dile a Git quién eres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-pasa-la-primera-vez-que-usas-git-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 ¿Qué pasa la primera vez que usas git clone?
     </span>
   </a>
   
@@ -391,12 +415,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../commands_vs_code/" class="md-nav__link">
+      <a href="../workshop/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Git en VS Code
+    Taller
     
   </span>
   
@@ -407,6 +431,51 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Material Útil
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Material Útil
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -414,12 +483,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../workshop/" class="md-nav__link">
+      <a href="../commands_vs_code/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Taller
+    Git en VS Code
     
   </span>
   
@@ -496,9 +565,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configura-git-con-tu-nombre" class="md-nav__link">
+  <a href="#configuracion-inicial-de-git" class="md-nav__link">
     <span class="md-ellipsis">
-      ✍️ Configura Git con tu nombre
+      ✍️ Configuración inicial de Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✍️ Configuración inicial de Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dile-a-git-quien-eres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dile a Git quién eres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-pasa-la-primera-vez-que-usas-git-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 ¿Qué pasa la primera vez que usas git clone?
     </span>
   </a>
   
@@ -576,11 +669,129 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w
 </div>
 </div>
 <hr />
-<h2 id="configura-git-con-tu-nombre">✍️ Configura Git con tu nombre</h2>
-<p>Una vez que Git esté instalado, abre Git Bash o Terminal y dile a Git quién eres:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Tu Nombre&quot;</span>
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;tu.email@example.com&quot;</span>
+<h2 id="configuracion-inicial-de-git">✍️ Configuración inicial de Git</h2>
+<h3 id="dile-a-git-quien-eres">Dile a Git quién eres</h3>
+<p>Después de instalar Git, abre <strong>Git Bash</strong> (en Windows) o la <strong>Terminal</strong> (en Mac o Linux). Luego escribe lo siguiente 👇</p>
+<p>🖥️ <em>Escribe en la terminal:</em></p>
+<pre><code>git config --global user.name "Tu Nombre"
+git config --global user.email "tu.email@example.com"
+</code></pre>
+<p>Esto le dice a Git cómo firmar tus proyectos (como si dejaras tu firma digital).</p>
+<hr />
+<h2 id="que-pasa-la-primera-vez-que-usas-git-clone">🔐 ¿Qué pasa la primera vez que usas <code>git clone</code>?</h2>
+<p>Cuando intentas copiar (o "clonar") un proyecto desde GitHub por primera vez, Git necesita saber que realmente eres tú. Esto se llama <strong>autenticación</strong>, y funciona de forma diferente según tu computadora:</p>
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">🪟 Windows</label><label for="__tabbed_2_2">🍏 Mac</label><label for="__tabbed_2_3">🐧 Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Abre <strong>Git Bash</strong> y escribe lo siguiente para clonar tu repositorio:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/tu-usuario/tu-repositorio.git
 </code></pre></div>
+<ol>
+<li>Se abrirá una <strong>ventana del navegador</strong> automáticamente.</li>
+<li>Inicia sesión en GitHub con tu usuario y contraseña, como si entraras normalmente a la página.</li>
+<li>¡Listo! 🎉 Git recordará que eres tú y no volverá a pedir tu contraseña cada vez que uses Git.</li>
+</ol>
+<blockquote>
+<p>✅ Esto es posible gracias a una herramienta llamada <strong>Git Credential Manager (GCM)</strong>, que ya viene incluida en Git para Windows. Guarda tus credenciales de forma segura en tu computadora.</p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Abre tu navegador y ve a esta página:<br />
+<a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></p>
+</li>
+<li>
+<p>Haz clic en <strong>"Generate new token"</strong>.</p>
+</li>
+<li>
+<ul>
+<li>Ponle una nota para recordar de qué es el token (por ejemplo, "Para acceso a repositorios").</li>
+<li>Elige una duración (por ejemplo, 90 días). Al finalizar los 90 días, deberás crear un nuevo token y repetir estos pasos. Si no quieres que expire, puedes indicar que no tenga fecha de expiración. ⚠️ Esto no se recomienda por motivos de seguridad, pero tú decides si te queda más cómodo.</li>
+<li>Marca la opción <code>repo</code> para darle permisos y que funcione con tus proyectos.</li>
+</ul>
+<p>Toma en cuenta esto para crearlo:</p>
+<p><img alt="Opcion repo en GitHub" src="../../../lessons/imgs/option_repo.png" /></p>
+</li>
+<li>
+<p>Haz clic en <strong>"Generate token"</strong> al final.<br />
+🔐 Copia ese código que aparece (¡guárdalo o pégalo en un lugar seguro porque luego no se puede recuperar!).</p>
+</li>
+<li>
+<p>Luego abre la <strong>Terminal</strong> y escribe:
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span>store
+</code></pre></div>
+    Esto le dice a Git que guarde tus credenciales para que no tengas que estar escribiendo tu token cada vez que interactúas con el repositorio de GitHub. Luego, intenta clonar tu repositorio:
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/tu-usuario/tu-repositorio.git
+</code></pre></div></p>
+</li>
+<li>
+<p>Git te va a pedir:</p>
+<ul>
+<li>Tu <strong>nombre de usuario de GitHub</strong></li>
+<li>Tu <strong>token</strong> (ese código largo que copiaste antes). Cuando pegues el token, no verás nada en la terminal, y eso es completamente normal. El token se pegó, pero la terminal no lo muestra porque se trata como una contraseña.</li>
+</ul>
+</li>
+<li>
+<p>Listo! Ahora puedes hacer <code>git push</code>, <code>git clone</code>, etc. sin problema.</p>
+</li>
+</ol>
+<blockquote>
+<p>⚠️ Esto guardará tu token en un archivo de texto dentro de tu computadora. Funciona bien si es tu PC personal, pero no lo hagas en computadoras públicas o compartidas.</p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Abre tu navegador y ve a esta página:<br />
+<a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></p>
+</li>
+<li>
+<p>Haz clic en <strong>"Generate new token"</strong>.</p>
+</li>
+<li>
+<ul>
+<li>Ponle una nota para recordar de qué es el token (por ejemplo, "Para acceso a repositorios").</li>
+<li>Elige una duración (por ejemplo, 90 días). Al finalizar los 90 días, deberás crear un nuevo token y repetir estos pasos. Si no quieres que expire, puedes indicar que no tenga fecha de expiración. ⚠️ Esto no se recomienda por motivos de seguridad, pero tú decides si te queda más cómodo.</li>
+<li>Marca la opción <code>repo</code> para darle permisos y que funcione con tus proyectos.</li>
+</ul>
+<p>Toma en cuenta esto para crearlo:</p>
+<p><img alt="Opcion repo en GitHub" src="../../../lessons/imgs/option_repo.png" /></p>
+</li>
+<li>
+<p>Haz clic en <strong>"Generate token"</strong> al final.<br />
+🔐 Copia ese código que aparece (¡guárdalo o pégalo en un lugar seguro porque luego no se puede recuperar!).</p>
+</li>
+<li>
+<p>Luego abre la <strong>Terminal</strong> y escribe:
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span>store
+</code></pre></div>
+    Esto le dice a Git que guarde tus credenciales para que no tengas que estar escribiendo tu token cada vez que interactúas con el repositorio de GitHub. Luego, intenta clonar tu repositorio:
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/tu-usuario/tu-repositorio.git
+</code></pre></div></p>
+</li>
+<li>
+<p>Git te va a pedir:</p>
+<ul>
+<li>Tu <strong>nombre de usuario de GitHub</strong></li>
+<li>Tu <strong>token</strong> (ese código largo que copiaste antes). Cuando pegues el token, no verás nada en la terminal, y eso es completamente normal. El token se pegó, pero la terminal no lo muestra porque se trata como una contraseña.</li>
+</ul>
+</li>
+<li>
+<p>Listo! Ahora puedes hacer <code>git push</code>, <code>git clone</code>, etc. sin problema.</p>
+</li>
+</ol>
+<blockquote>
+<p>⚠️ Esto guardará tu token en un archivo de texto dentro de tu computadora. Funciona bien si es tu PC personal, pero no lo hagas en computadoras públicas o compartidas.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<hr />
+<p>Si usas Git por primera vez, no te preocupes si algo no sale perfecto. ¡Todo el mundo aprende poco a poco! 🧠✨</p>
 <h2 id="que-es-github">🌐 ¿Qué es GitHub?</h2>
 <p>GitHub es un sitio web gratuito donde puedes:</p>
 <ul>
@@ -588,6 +799,7 @@ git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"
 <li>👯 <strong>Colaborar con otros</strong>: Trabaja en equipo en un mismo proyecto sin sobrescribir el trabajo de los demás.</li>
 <li>📣 <strong>Mostrar tu trabajo al mundo</strong>: Comparte tus creaciones con reclutadores, amigos o la comunidad.</li>
 </ul>
+<p>Git es la herramienta que usamos para llevar el control de versiones local, y GitHub nos ayuda a compartir ese control de versiones con más personas, en distintas máquinas.</p>
 <hr />
 <h2 id="como-usar-github">🚀 Cómo usar GitHub</h2>
 <ul>

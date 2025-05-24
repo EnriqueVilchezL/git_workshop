@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://EnriqueVilchezL.github.io/git_workshop/lessons/workshop/">
       
       
-        <link rel="prev" href="../commands_vs_code/">
+        <link rel="prev" href="../commands/">
       
       
-        <link rel="next" href="../best_practices/">
+        <link rel="next" href="../commands_vs_code/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -310,29 +310,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../commands_vs_code/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Git in VS Code
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -448,10 +425,111 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#step-7-partner-a-check-the-original-function-and-add-it-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ Step 7: Partner A - Check the Original Function and Add It Back
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏰ Step 7: Partner A - Check the Original Function and Add It Back">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-exactly-are-we-doing-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      What exactly are we doing here?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heres-what-well-do-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Here’s what we’ll do, step by step:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Useful Material
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Useful Material
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commands_vs_code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Git in VS Code
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -573,6 +651,39 @@
       🛠️ Step 6: Resolve the Merge Conflict
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-partner-a-check-the-original-function-and-add-it-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ Step 7: Partner A - Check the Original Function and Add It Back
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏰ Step 7: Partner A - Check the Original Function and Add It Back">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-exactly-are-we-doing-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      What exactly are we doing here?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heres-what-well-do-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Here’s what we’ll do, step by step:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -754,10 +865,80 @@ git<span class="w"> </span>push
 git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Resolve merge conflict and keep both functions&quot;</span>
 git<span class="w"> </span>push
 </code></pre></div></p>
+<h2 id="step-7-partner-a-check-the-original-function-and-add-it-back">⏰ Step 7: Partner A - Check the Original Function and Add It Back</h2>
+<p>Alright! Now let’s take a little trip back in time to see the very first version of our <code>summation</code> function — the one you wrote before your partner started making changes. This is a great way to check if your original function is correct and wasn’t accidentally changed.</p>
+<h3 id="what-exactly-are-we-doing-here">What exactly are we doing here?</h3>
+<ul>
+<li>When we use <code>git checkout &lt;commit&gt;</code>, we <strong>temporarily switch our project files to look exactly like they did at that specific commit</strong> — like rewinding a movie to an earlier scene.  </li>
+<li>This doesn’t delete anything; it just lets us <strong>view or copy code from the past</strong> without changing the current state.  </li>
+<li>Once we’re done looking, we’ll <strong>go back to the latest version on the main branch</strong> using <code>git checkout main</code>.  </li>
+<li>Then, we’ll add the original function back into the current code, but with a new name so it doesn’t interfere with your partner’s changes.  </li>
+</ul>
+<h3 id="heres-what-well-do-step-by-step">Here’s what we’ll do, step by step:</h3>
+<ol>
+<li>
+<p>First, update your local copy with the latest changes so everything is synced. We don't want any more conflicts!  Do you remember how to do it?</p>
+<details class="example">
+<summary>Answer</summary>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull
+</code></pre></div>
+</details>
+</li>
+<li>
+<p><strong>Find the very first commit you made</strong> (that’s like the first snapshot of your project):</p>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</code></pre></div>
+<p>This will show a list of commits. Scroll down and find the oldest one at the bottom. Copy its short code (it looks like a mix of letters and numbers, for example: <code>a1b2c3d</code>).</p>
+</li>
+<li>
+<p><strong>Check out that first commit to see what your code looked like back then:</strong></p>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>a1b2c3d
+</code></pre></div>
+<p>This will make us travel in time to your commit!</p>
+<p><em>(Replace <code>a1b2c3d</code> with the actual code you copied!)</em></p>
+</li>
+<li>
+<p><strong>Open <code>math_utils.py</code> and find your original <code>summation</code> function.</strong></p>
+<p>Copy all the code inside this function — this is your original, unmodified version.</p>
+</li>
+<li>
+<p><strong>Now, come back to the present!</strong></p>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+</code></pre></div>
+</li>
+<li>
+<p><strong>Open <code>math_utils.py</code> again.</strong><br />
+    Paste the original function you copied, but rename it to <code>summation_original</code> to keep it separate from the current one, like this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">summation_original</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">summation</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">summation</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">summation</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Save the file, then add, commit, and push your changes:</strong>
+    Try to do it, you are an expert at this!</p>
+<details class="example">
+<summary>Answer</summary>
+<p>→ Run in terminal:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>math_utils.py
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add original summation function as summation_original&quot;</span>
+git<span class="w"> </span>push
+</code></pre></div>
+</details>
+</li>
+</ol>
+<hr />
+<p>🎉 Now you have <strong>both versions</strong> of the function in your project! This way, you can compare them, test which one works better, or just keep the original safe. Great job going back in time and learning how to manage your project’s history like a pro!</p>
 <hr />
 <h1 id="bonus-lesson-vscode-git-github-paired-exercise">🧪 Bonus lesson: VSCode Git &amp; GitHub Paired Exercise</h1>
 <p>Try to recreate the tutorial inverting your roles. But now, we will try to use the Built-In feature of Visual Studio Code to manage the git repository. Instead of using bash git commands, we can use VS Code to do everything we need.</p>
-<p>If you need some help, check the <a href="../commands_vs_code/">VS Code Git</a> section.</p>
+<p>If you need some help, check the <a href="../commands_vs_code/">VS Code Git</a> section. If you can't execute some commands in VS Code, use the terminal.</p>
 <hr />
 <h2 id="pro-tips">💬 Pro Tips</h2>
 <ul>
@@ -765,6 +946,7 @@ git<span class="w"> </span>push
 <li>Communicate with your partner to avoid overlap and confusion.</li>
 <li>Always pull before pushing when working in teams.</li>
 </ul>
+<p>Check the <a href="../best_practices/">Best Practices</a> section to become a Pro!</p>
 <p>Happy coding!</p>
 
 
