@@ -809,11 +809,25 @@ git<span class="w"> </span>push
 <hr />
 <h2 id="paso-5-espera-un-conflicto-de-fusion">🚨 Paso 5: Espera un conflicto de fusión</h2>
 <p>Socio B: es probable que veas algo como</p>
-<p><span style="color:red">! [rejected] main -&gt; main (fetch first)</span></p>
+<p><span style="color:red">! [rejected] main -&gt; main (fetch first)</span> y muchas otras líneas.</p>
 <p>Esto significa que alguien más (Socio A) ya envió cambios.</p>
 <p>→ Ejecuta en la terminal:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>--no-rebase
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span>--allow-unrelated-histories<span class="w"> </span>--no-rebase
 </code></pre></div>
+<details class="note">
+<summary>Nota sobre --no-rebase</summary>
+<p>En este taller usamos <code>--no-rebase</code> para hacerlo más simple y evitar confusiones mientras aprendemos. Pero en trabajos reales, usar <code>rebase</code> es mejor porque mantiene el historial más ordenado y fácil de entender.</p>
+<p>El rebase pone tus cambios encima de los cambios nuevos del repositorio remoto, haciendo que todo quede en una línea limpia. Por ahora, no lo usamos para que sea más fácil.</p>
+<p>Además de <code>--no-rebase</code>, el comando tiene otros parámetros:</p>
+<ul>
+<li><code>origin</code>: es el nombre del repositorio remoto de donde traemos los cambios (normalmente se llama así). Cuando haces git clone https://github.com/usuario/proyecto.git, Git automáticamente crea un “remoto” llamado origin que apunta a esa URL.</li>
+<li><code>main</code>: es la rama principal del repositorio de donde sacamos los cambios (no te preocupes por las ramas ahora).</li>
+<li><code>--allow-unrelated-histories</code>: sirve para juntar dos proyectos que no tienen nada que ver antes, como cuando unes dos carpetas diferentes. En este caso lo usamos porque el repositorio que clonamos estaba vacío, entonces Git reconoce dos historiales distintos (uno con commits -que es el remoto- y uno vacío -que es el local-).</li>
+</ul>
+<blockquote>
+<p>🧠 <strong>Recuerda:</strong> En equipos reales se usa mucho <code>git pull --rebase</code> para evitar problemas y mantener todo ordenado. Aquí lo hacemos simple para que puedas aprender tranquilo.</p>
+</blockquote>
+</details>
 <p>Verás un conflicto de fusión en <code>math_utils.py</code>.</p>
 <hr />
 <h2 id="paso-6-resolver-el-conflicto-de-fusion">🛠️ Paso 6: Resolver el conflicto de fusión</h2>
