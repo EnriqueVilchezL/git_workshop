@@ -14,7 +14,7 @@ Partner A should:
 2. Click the **+** icon in the top right, then choose **New repository**.
 3. Name the repository: `python-functions-practice`
 4. Optionally, add a description.
-5. **Leave all checkboxes unchecked** (no README, no .gitignore, no license).
+5. **Leave all checkboxes unchecked** except the `README` (check the `README` box).
 6. Click **Create repository**.
 7. Copy the HTTPS URL shown (you’ll use it to clone).
 
@@ -160,7 +160,7 @@ This means someone else (Partner A) already pushed changes.
 → Run in terminal:
 
 ```bash
-git pull origin main --allow-unrelated-histories --no-rebase
+git pull --no-rebase
 ```
 
 ??? note "Note about --no-rebase"
@@ -168,12 +168,6 @@ git pull origin main --allow-unrelated-histories --no-rebase
     In this workshop, we use `--no-rebase` to keep things simple and avoid confusion while we learn. But in real work environments, using `rebase` is better because it keeps the history cleaner and easier to understand.
 
     Rebase puts your changes on top of the new changes from the remote repository, making the history a straight line. For now, we don’t use it to keep things easier.
-
-    Besides `--no-rebase`, the command has other parameters:
-
-    - `origin`: is the name of the remote repository where we get the changes from (it’s usually called this). When you run `git clone https://github.com/user/project.git`, Git automatically creates a “remote” called origin that points to that URL.
-    - `main`: is the main branch of the repository where we get the changes from (don’t worry about branches for now).
-    - `--allow-unrelated-histories`: is used to join two projects that didn’t have anything to do with each other before, like when you merge two different folders. In this case, we use it because the repo we cloned was empty, so Git sees two different histories (one with commits — the remote — and one empty — the local).
 
     > 🧠 **Remember:** In real teams, `git pull --rebase` is commonly used to avoid problems and keep everything tidy. Here we keep it simple so you can learn without stress.
 
@@ -228,7 +222,7 @@ def summation_2(n):
     return summation
 ```
 
-Then run:
+**Save the file**. Then run:
 
 → Run in terminal:
 ```bash
@@ -257,7 +251,7 @@ Alright! Now let’s take a little trip back in time to see the very first versi
         → Run in terminal:
 
         ```bash
-        git pull
+        git pull --rebase
         ```
 
 2. **Find the very first commit you made** (that’s like the first snapshot of your project):

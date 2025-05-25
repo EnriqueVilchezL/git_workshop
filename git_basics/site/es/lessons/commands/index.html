@@ -559,12 +559,13 @@
 <center>
 <pre class="mermaid"><code>graph TD
     A[Crear repositorio en GitHub] --&gt; B[Clonar repositorio localmente];
-    B --&gt; C[Hacer cambios en tu código];
-    C --&gt; D[Preparar cambios con git add];
-    D --&gt; E[Confirmar cambios con git commit];
-    E --&gt; F[Enviar a GitHub con git push];
-    F --&gt; G[Verificar repositorio remoto];
-    G --&gt; |Seguir codificando| C;</code></pre>
+    B --&gt; C[Actualizar con git pull];
+    C --&gt; D[Hacer cambios en tu código];
+    D --&gt; E[Preparar cambios con git add];
+    E --&gt; F[Confirmar cambios con git commit];
+    F --&gt; G[Enviar a GitHub con git push];
+    G --&gt; H[Verificar repositorio remoto];
+    H --&gt; |Seguir codificando| C;</code></pre>
 </center>
 <p>Si clonamos un repositorio remoto, podemos saltarnos el paso de hacer <code>git init</code>.</p>
 </article>

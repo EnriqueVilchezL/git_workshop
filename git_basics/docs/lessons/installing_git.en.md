@@ -61,7 +61,6 @@ When you try to copy (or “clone”) a project from GitHub for the first time, 
 === "🪟 Windows"
 
     1. Open a **Terminal** and type the following to clone your repository:
-
     ```bash
     git clone https://github.com/your-username/your-repository.git
     ```

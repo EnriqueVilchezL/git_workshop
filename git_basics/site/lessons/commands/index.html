@@ -559,12 +559,13 @@
 <center>
 <pre class="mermaid"><code>graph TD
     A[Create Repository on GitHub] --&gt; B[Clone Repo Locally];
-    B --&gt; C[Make Changes in your code];
-    C --&gt; D[Stage Changes with git add];
-    D --&gt; E[Commit Changes with git commit];
-    E --&gt; F[Push to GitHub with git push];
-    F --&gt; G[Check Remote Repo];
-    G --&gt; |Keep coding| C;</code></pre>
+    B --&gt; C[Pull Latest Changes with git pull];
+    C --&gt; D[Make Changes in your code];
+    D --&gt; E[Stage Changes with git add];
+    E --&gt; F[Commit Changes with git commit];
+    F --&gt; G[Push to GitHub with git push];
+    G --&gt; H[Check Remote Repo];
+    H --&gt; |Keep coding| C;</code></pre>
 </center>
 <p>If we clone a remote repository, we can skip the <code>git init</code> step.</p>
 </article>

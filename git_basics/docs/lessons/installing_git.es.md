@@ -61,7 +61,6 @@ Cuando intentas copiar (o "clonar") un proyecto desde GitHub por primera vez, Gi
 === "🪟 Windows"
 
     1. Abre **Git Bash** y escribe lo siguiente para clonar tu repositorio:
-
     ```bash
     git clone https://github.com/tu-usuario/tu-repositorio.git
     ```
@@ -182,7 +181,7 @@ Git tiene muchas otras opciones, por ahora las que podrían ser importantes son:
 - Ahora abre la **Terminal** y escribe este comando para copiar el proyecto a tu computadora:
 
 ```bash
-git clone [[https://github.com/tu-nombre-de-usuario/nombre-de-tu-repositorio.git](https://github.com/tu-nombre-de-usuario/nombre-de-tu-repositorio.git)]
+git clone [https://github.com/tu-nombre-de-usuario/nombre-de-tu-repositorio.git]
 ```
 
 - Presiona Enter y Git descargará la carpeta del proyecto a tu computadora. 🎉
