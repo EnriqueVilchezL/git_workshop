@@ -115,3 +115,22 @@ This is like handing your sealed and labeled box to the shipping company. You're
 ![Truck with boxes](imgs/truck.png)
 
 To see these commands in VS Code, check the [VS Code Git](commands_vs_code.en.md).
+
+## Aditional considerations
+
+Even though the box analogy works perfectly, you need to know that the `git init` command rarely gets used. Normally, the workflow for git is the following:
+
+<center>
+``` mermaid
+graph TD
+    A[Create Repository on GitHub] --> B[Clone Repo Locally];
+    B --> C[Make Changes in your code];
+    C --> D[Stage Changes with git add];
+    D --> E[Commit Changes with git commit];
+    E --> F[Push to GitHub with git push];
+    F --> G[Check Remote Repo];
+    G --> |Keep coding| C;
+```
+</center>
+
+If we clone a remote repository, we can skip the `git init` step.

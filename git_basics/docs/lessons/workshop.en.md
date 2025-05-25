@@ -2,6 +2,8 @@
 
 This tutorial will guide you and a partner through collaborating on a Python project using Git and GitHub. You’ll practice creating a repo, cloning it, writing code, committing changes, pushing to GitHub, and resolving a merge conflict.
 
+If you ever need a refresher on commands or the Git workflow, feel free to refer to the [Git Commands](commands.en.md) section at any time.
+
 ---
 
 ## 📁 Step 0: Create a GitHub Repository

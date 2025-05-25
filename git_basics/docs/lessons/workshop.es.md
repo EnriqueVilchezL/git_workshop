@@ -2,6 +2,8 @@
 
 Este tutorial los guiará a ti y a un compañero a través de la colaboración en un proyecto de Python usando Git y GitHub. Practicarán la creación de un repositorio, su clonación, la escritura de código, la confirmación de cambios, el envío a GitHub y la resolución de un conflicto de fusión.
 
+Si en algún momento necesitas repasar los comandos o el flujo de trabajo de Git, puedes consultar la sección [Comandos de Git](commands.es.md) cuando quieras.
+
 ---
 
 ## 📁 Paso 0: Crear un repositorio de GitHub

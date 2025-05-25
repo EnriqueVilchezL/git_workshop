@@ -1,6 +1,26 @@
 # Basic Git Commands You Need to Know in Visual Studio Code
 
-In Visual Studio Code, there is a Built-In feature to manage your git repository. IN the left side of your VS Code window, you will see this symbol:
+To start using Git in Visual Studio Code, follow these simple steps:
+
+1. **Create a Repository on GitHub**  
+   Go to [github.com](https://github.com) and sign in.  
+   Click **"New repository"**, choose a name, and create your remote repository.
+
+2. **Clone the Repository to Your Computer**  
+   Copy the repository URL (using HTTPS or SSH).  
+   Then, open a terminal on your computer and run the following command:  
+   `git clone https://github.com/your-username/your-repo-name.git`  
+   This will download the repository into a local folder.
+
+3. **Open the Project Folder in VS Code**  
+   Open VS Code and go to `File` > `Open Folder...`.  
+   Navigate to the folder where you cloned the repository and open it.
+
+4. **Trust the Authors**  
+   When prompted by VS Code, click **"Yes, I trust the authors"**.  
+   This enables Git and other workspace features to function properly and securely.
+
+In Visual Studio Code, there is a Built-In feature to manage your git repository. In the left side of your VS Code window, you will see this symbol:
 
 ![VS Code Git Symbol](imgs/vs_git.png)
 

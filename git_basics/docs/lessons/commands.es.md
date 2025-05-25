@@ -115,3 +115,22 @@ Esto es como entregar tu caja sellada y etiquetada a la empresa de transporte. F
 ![Truck with boxes](imgs/truck.png)
 
 Para ver estos comandos en VS Code, consulta la [sección de Git en VS Code](commands_vs_code.es.md).
+
+## Consideraciones adicionales
+
+Aunque la analogía de la caja funciona perfectamente, debes saber que el comando `git init` rara vez se utiliza. Normalmente, el flujo de trabajo con Git es el siguiente:
+
+<center>
+```mermaid
+graph TD
+    A[Crear repositorio en GitHub] --> B[Clonar repositorio localmente];
+    B --> C[Hacer cambios en tu código];
+    C --> D[Preparar cambios con git add];
+    D --> E[Confirmar cambios con git commit];
+    E --> F[Enviar a GitHub con git push];
+    F --> G[Verificar repositorio remoto];
+    G --> |Seguir codificando| C;
+```
+</center>
+
+Si clonamos un repositorio remoto, podemos saltarnos el paso de hacer `git init`.
