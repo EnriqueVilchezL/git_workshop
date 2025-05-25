@@ -144,12 +144,13 @@ Even though the box analogy works perfectly, you need to know that the `git init
 ``` mermaid
 graph TD
     A[Create Repository on GitHub] --> B[Clone Repo Locally];
-    B --> C[Make Changes in your code];
-    C --> D[Stage Changes with git add];
-    D --> E[Commit Changes with git commit];
-    E --> F[Push to GitHub with git push];
-    F --> G[Check Remote Repo];
-    G --> |Keep coding| C;
+    B --> C[Pull Latest Changes with git pull];
+    C --> D[Make Changes in your code];
+    D --> E[Stage Changes with git add];
+    E --> F[Commit Changes with git commit];
+    F --> G[Push to GitHub with git push];
+    G --> H[Check Remote Repo];
+    H --> |Keep coding| C;
 ```
 </center>
 

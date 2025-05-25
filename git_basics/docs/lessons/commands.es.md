@@ -144,12 +144,13 @@ Aunque la analogía de la caja funciona perfectamente, debes saber que el comand
 ```mermaid
 graph TD
     A[Crear repositorio en GitHub] --> B[Clonar repositorio localmente];
-    B --> C[Hacer cambios en tu código];
-    C --> D[Preparar cambios con git add];
-    D --> E[Confirmar cambios con git commit];
-    E --> F[Enviar a GitHub con git push];
-    F --> G[Verificar repositorio remoto];
-    G --> |Seguir codificando| C;
+    B --> C[Actualizar con git pull];
+    C --> D[Hacer cambios en tu código];
+    D --> E[Preparar cambios con git add];
+    E --> F[Confirmar cambios con git commit];
+    F --> G[Enviar a GitHub con git push];
+    G --> H[Verificar repositorio remoto];
+    H --> |Seguir codificando| C;
 ```
 </center>
 

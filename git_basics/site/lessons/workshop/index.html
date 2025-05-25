@@ -809,11 +809,25 @@ git<span class="w"> </span>push
 <hr />
 <h2 id="step-5-expect-a-merge-conflict">🚨 Step 5: Expect a Merge Conflict</h2>
 <p>Partner B: are likely seeing something like</p>
-<p><span style="color:red">! [rejected] main -&gt; main (fetch first)</span></p>
+<p><span style="color:red">! [rejected] main -&gt; main (fetch first)</span> and many other lines.</p>
 <p>This means someone else (Partner A) already pushed changes.</p>
 <p>→ Run in terminal:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>--no-rebase
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main<span class="w"> </span>--allow-unrelated-histories<span class="w"> </span>--no-rebase
 </code></pre></div>
+<details class="note">
+<summary>Note about --no-rebase</summary>
+<p>In this workshop, we use <code>--no-rebase</code> to keep things simple and avoid confusion while we learn. But in real work environments, using <code>rebase</code> is better because it keeps the history cleaner and easier to understand.</p>
+<p>Rebase puts your changes on top of the new changes from the remote repository, making the history a straight line. For now, we don’t use it to keep things easier.</p>
+<p>Besides <code>--no-rebase</code>, the command has other parameters:</p>
+<ul>
+<li><code>origin</code>: is the name of the remote repository where we get the changes from (it’s usually called this). When you run <code>git clone https://github.com/user/project.git</code>, Git automatically creates a “remote” called origin that points to that URL.</li>
+<li><code>main</code>: is the main branch of the repository where we get the changes from (don’t worry about branches for now).</li>
+<li><code>--allow-unrelated-histories</code>: is used to join two projects that didn’t have anything to do with each other before, like when you merge two different folders. In this case, we use it because the repo we cloned was empty, so Git sees two different histories (one with commits — the remote — and one empty — the local).</li>
+</ul>
+<blockquote>
+<p>🧠 <strong>Remember:</strong> In real teams, <code>git pull --rebase</code> is commonly used to avoid problems and keep everything tidy. Here we keep it simple so you can learn without stress.</p>
+</blockquote>
+</details>
 <p>You’ll see a merge conflict in <code>math_utils.py</code>.</p>
 <hr />
 <h2 id="step-6-resolve-the-merge-conflict">🛠️ Step 6: Resolve the Merge Conflict</h2>
