@@ -100,6 +100,8 @@ This is like flipping through your shipping logbook. It lists all the boxes you'
 
 ![List](imgs/shipping_list.png)
 
+---
+
 ## `git push`
 
 This command sends your committed changes to a remote repository like GitHub.
@@ -113,6 +115,24 @@ git push origin main
 This is like handing your sealed and labeled box to the shipping company. You're finally sending it off to the secure vault (GitHub) in another country. Until you push, the box is still sitting at your place — prepared, but not delivered.
 
 ![Truck with boxes](imgs/truck.png)
+
+---
+
+## `git pull`
+
+This command updates your local repository with the latest changes from the remote.
+
+```bash
+git pull origin main
+```
+
+### 🔄 Analogy
+
+This is like checking your mailbox for any new packages before sending yours. Someone else may have added more things to the shared vault (GitHub), and it's polite — and safe — to make sure you're not about to overwrite or miss anything.
+
+![Mailbox](imgs/mailbox.png)
+
+---
 
 To see these commands in VS Code, check the [VS Code Git](commands_vs_code.en.md).
 

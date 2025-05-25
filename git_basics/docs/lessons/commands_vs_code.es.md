@@ -68,4 +68,16 @@ Para ejecutar esto, simplemente presiona el botón `Sync Changes` (Sincronizar c
 
 ![VS Code Push](imgs/vs_git_push.png)
 
+---
+
+## `git pull`
+
+Este comando actualiza tu repositorio local con los últimos cambios del repositorio remoto.
+
+Para ejecutarlo, simplemente presiona el botón `...` y luego `Pull`:
+
+![VS Code Pull](imgs/vs_git_pull.jpg)
+
+---
+
 Para ver estos comandos en la terminal, consulta los [Comandos de Git](commands.es.md).

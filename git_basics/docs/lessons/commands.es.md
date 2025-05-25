@@ -100,6 +100,8 @@ Esto es como hojear tu libro de registro de envíos. En él se enumeran todas la
 
 ![List](imgs/shipping_list.png)
 
+---
+
 ## `git push`
 
 Este comando envía tus cambios confirmados a un repositorio remoto como GitHub.
@@ -113,6 +115,24 @@ git push origin main
 Esto es como entregar tu caja sellada y etiquetada a la empresa de transporte. Finalmente la estás enviando a la bóveda segura (GitHub) en otro país. Hasta que no hagas `push`, la caja sigue en tu casa, preparada, pero no entregada.
 
 ![Truck with boxes](imgs/truck.png)
+
+---
+
+## `git pull`
+
+Este comando actualiza tu repositorio local con los últimos cambios del repositorio remoto.
+
+```bash
+git pull origin main
+```
+
+### 🔄 Analogía
+
+Es como revisar tu buzón de correo antes de enviar una carta. Puede que alguien más haya añadido cosas nuevas a la bóveda compartida (GitHub), y es educado —y seguro— asegurarte de que no estás a punto de sobrescribir o perder nada.
+
+![Buzón](imgs/mailbox.png)
+
+---
 
 Para ver estos comandos en VS Code, consulta la [sección de Git en VS Code](commands_vs_code.es.md).
 

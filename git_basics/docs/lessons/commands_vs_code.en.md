@@ -68,4 +68,16 @@ To run this, just press the `Sync Changes` button:
 
 ![VS Code Push](imgs/vs_git_push.png)
 
+---
+
+## `git pull`
+
+This command updates your local repository with the latest changes from the remote.
+
+To run this, just press the `...` and `Pull` button:
+
+![VS Code Pull](imgs/vs_git_pull.jpg)
+
+---
+
 To see these commands in terminal, check the [Git Commands](commands.en.md).

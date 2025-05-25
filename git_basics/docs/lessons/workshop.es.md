@@ -152,15 +152,29 @@ Ups... Algo salió mal... ¿Qué es?
 
 Socio B: es probable que veas algo como
 
-<span style="color:red">! [rejected] main -> main (fetch first)</span>
+<span style="color:red">! [rejected] main -> main (fetch first)</span> y muchas otras líneas.
 
 Esto significa que alguien más (Socio A) ya envió cambios.
 
 → Ejecuta en la terminal:
 
 ```bash
-git pull --no-rebase
+git pull origin main --allow-unrelated-histories --no-rebase
 ```
+
+??? note "Nota sobre --no-rebase"
+
+    En este taller usamos `--no-rebase` para hacerlo más simple y evitar confusiones mientras aprendemos. Pero en trabajos reales, usar `rebase` es mejor porque mantiene el historial más ordenado y fácil de entender.
+
+    El rebase pone tus cambios encima de los cambios nuevos del repositorio remoto, haciendo que todo quede en una línea limpia. Por ahora, no lo usamos para que sea más fácil.
+
+    Además de `--no-rebase`, el comando tiene otros parámetros:
+
+    - `origin`: es el nombre del repositorio remoto de donde traemos los cambios (normalmente se llama así). Cuando haces git clone https://github.com/usuario/proyecto.git, Git automáticamente crea un “remoto” llamado origin que apunta a esa URL.
+    - `main`: es la rama principal del repositorio de donde sacamos los cambios (no te preocupes por las ramas ahora).
+    - `--allow-unrelated-histories`: sirve para juntar dos proyectos que no tienen nada que ver antes, como cuando unes dos carpetas diferentes. En este caso lo usamos porque el repositorio que clonamos estaba vacío, entonces Git reconoce dos historiales distintos (uno con commits -que es el remoto- y uno vacío -que es el local-).
+
+    > 🧠 **Recuerda:** En equipos reales se usa mucho `git pull --rebase` para evitar problemas y mantener todo ordenado. Aquí lo hacemos simple para que puedas aprender tranquilo.
 
 Verás un conflicto de fusión en `math_utils.py`.
 
